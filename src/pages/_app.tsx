@@ -1,6 +1,6 @@
 import { fetcher } from "@/client/base";
 import { IDefaultLayoutPage } from "@/components/layout/default-layout";
-import SeoHead from "@/components/shared/seo-head";
+import SeoHead from "@/components/layout/seo-head";
 import AuthProvider from "@/lib/auth/auth-provider";
 import "@/styles/globals.css";
 import localFont from "@next/font/local";
@@ -31,6 +31,7 @@ export default function App({ Component, pageProps: { session, ...pageProps } }:
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
+        <script src="https://buttr.dev/butter.js" data-site-id="fagqakujre" async />
       </Head>
       <ConfigProvider
         theme={{

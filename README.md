@@ -5,39 +5,43 @@
 </h1>
 
 <p align="center">
-  Next.js 기반 어드민 UI
+  Next.js와 Tailwind를 이용한 모-던 어드민 템플릿
 </p>
 
 ## 소개
 
-누구나 손쉽고 빠르게 백오피스 페이지를 개발할 수 있도록 인기있는 라이브러리를 모아 만든 Next.js 기반 어드민 UI입니다. ~~어드민 개발만 10년째..~~
+누구나 손쉽고 빠르게 백오피스 페이지를 개발할 수 있도록 인기있는 라이브러리를 모아 만든 Next.js + Tailwind + Ant Design 기반 어드민 템플릿입니다. ~~어드민 개발만 10년째..~~
 
 ## 데모
 
 https://admin-ui.purple.io/
 
-- OAuth(Google/GitHub) 또는 아이디/패스워드(admin/admin) 로그인
+> OAuth(Google/GitHub) 또는 아이디/패스워드(admin/admin)으로 로그인하세요.
 
-## One-click 배포
+## 프로젝트 만들기
 
-하단 버튼을 클릭하여 배포하고 테스트 할 수 있습니다.
+`Deploy` 버튼을 클릭하여 소스를 복제하고 [vercel](https://vercel.com)에 배포하여 테스트 할 수 있습니다.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fpurpleio%2Fpurple-admin-ui&project-name=purple-admin-ui&repository-name=purple-admin-ui&demo-title=purple-admin-ui&demo-description=Next.js%20%EA%B8%B0%EB%B0%98%20%EC%96%B4%EB%93%9C%EB%AF%BC%20UI&demo-url=https%3A%2F%2Fadmin-ui.purple.io&demo-image=https%3A%2F%2Fadmin-ui.purple.io%2Fog.png&env=NEXTAUTH_SECRET&envDescription=How%20to%20get%20these%20env%20variables%3A&envLink=https%3A%2F%2Fgithub.com%2Fpurpleio%2Fpurple-admin-ui%2Fblob%2Fmain%2F.env.example)
 
-다음 명령어를 입력하여 프로젝트를 설정하세요.
+소스를 [다운로드](https://github.com/purpleio/purple-admin-ui/archive/refs/heads/main.zip)하거나 다음 명령어를 입력하여 프로젝트를 시작할 수 있습니다.
 
 ```bash
 # npm
-npx create-next-app purple-admin-ui --example "https://github.com/purpleio/purple-admin-ui"
+npx create-next-app --example "https://github.com/purpleio/purple-admin-ui"
 # yarn
-yarn create next-app purple-admin-ui --example "https://github.com/purpleio/purple-admin-ui"
+yarn create next-app --example "https://github.com/purpleio/purple-admin-ui"
 # pnpm
-pnpm create next-app purple-admin-ui --example "https://github.com/purpleio/purple-admin-ui"
+pnpm create next-app --example "https://github.com/purpleio/purple-admin-ui"
 ```
 
-## 기본 설정
+### 기본 설정
 
-1. `.env.example` 파일을 복사하여 `.env` 파일을 생성합니다.
+`.env.example` 파일을 복사하여 `.env` 파일을 생성합니다.
+
+```bash
+cp .env.example .env
+```
 
 | 키                   | 설명                       | 예시                                                     |
 | -------------------- | -------------------------- | -------------------------------------------------------- |
@@ -52,19 +56,19 @@ pnpm create next-app purple-admin-ui --example "https://github.com/purpleio/purp
 
 ### Framework
 
-- [Next.js](https://nextjs.org/) – React.js 기반 프레임워크
-- [Auth.js](https://authjs.dev/) – 아이디/패스워드 또는 구글/GitHub 로그인을 지원하는 인증 라이브러리
+- [Next.js](https://nextjs.org/) – Vercel에서 만든 React.js 기반 프레임워크
+- [Auth.js](https://authjs.dev/) – OAuth(구글/GitHub) 또는 아이디/패스워드 로그인을 지원하는 인증 라이브러리
 
 ### Platforms
 
-- [Vercel](https://vercel.com/) – Next.js 배포 서비스
+- [Vercel](https://vercel.com/) – Next.js 애플리케이션 배포 서비스
 
 ### UI
 
 - [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework
 - [Ant Design](https://www.radix-ui.com/) – 다양한 관리자 컴포넌트를 지원하는 UI 라이브러리
-- [Framer Motion](https://framer.com/motion) – React.js 기반 애니메이션 라이브러리
-- [Lucide](https://lucide.dev/) – SVG 아이콘 라이브러리
+- [Lucide](https://lucide.dev/) – SVG 아이콘 모음
+- [Framer Motion](https://framer.com/motion) – 애니메이션 라이브러리
 - [`@next/font`](https://nextjs.org/docs/basic-features/font-optimization) – 웹폰트 최적화 라이브러리
 
 ### Code Quality
@@ -75,13 +79,39 @@ pnpm create next-app purple-admin-ui --example "https://github.com/purpleio/purp
 
 ### Miscellaneous
 
-- [Pretendard](https://cactus.tistory.com/306) – 한글에 최적화 된 웹폰트
+- [Pretendard](https://cactus.tistory.com/306) – 어느 플랫폼에서든 사용할 수 있는 system-ui 대체 글꼴
 - [Day.js](https://day.js.org/) – 날짜/시간 라이브러리
-- [swr](https://swr.vercel.app/) - 데이터 가져오기를 위한 React Hooks
+- [swr](https://swr.vercel.app/) - 데이터 조회를 위한 Hooks
+- [codenbutter](https://www.codenbutter.com/) - 공지 팝업
 
-## 컴포넌트
+## 디렉토리
 
-작성중
+효율적인 관리를 위해 디렉토리 구조를 다음과 같이 정의합니다.
+
+```
+┌─ src
+│  ├─ client # API 호출 코드
+│  ├─ components
+│  │  ├─ layout # 기본 레이아웃
+│  │  ├─ page # 페이지별 세부 컴포넌트
+│  │  └─ shared # 공통 컴포넌트
+│  ├─ fonts # 웹폰트
+│  ├─ lib
+│  │  ├─ auth # 인증 관련 코드
+│  │  └─ hooks # react hooks
+│  ├─ pages # 페이지
+│  ├─ styles # 기본 스타일
+│  └─ types # 타입 정의
+└─ public # 이미지등 정적 파일
+```
+
+**특징**
+
+- API 호출 코드는 `client`에 모아서 관리
+- component의 style은 같은 폴더에 module.css로 작성
+- `pages` 파일의 세부 컴포넌트를 `components/page`에 작성
+
+## 커스텀 컴포넌트
 
 ## 제한
 
