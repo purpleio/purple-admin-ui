@@ -1,5 +1,5 @@
 import { Divider } from "antd";
-import { Home, List, Monitor, User } from "lucide-react";
+import { Home, List, Monitor } from "lucide-react";
 import React from "react";
 import Menu, { IMenu } from "./nav";
 
@@ -12,24 +12,25 @@ const mainMenuData: IMenu[] = [
     },
   },
   {
-    name: "리스트",
+    name: "샘플 페이지",
     icon: <List className="w-5 h-5" />,
-    link: {
-      path: "/list",
-      query: {
-        text: "react",
+    submenu: [
+      {
+        name: "패키지 목록",
+        link: {
+          path: "/sample/list",
+          query: {
+            text: "react",
+          },
+        },
       },
-    },
-  },
-];
-
-const adminMenuData: IMenu[] = [
-  {
-    name: "사용자관리",
-    icon: <User className="w-5 h-5" />,
-    link: {
-      path: "/manage/user",
-    },
+      {
+        name: "사용자관리",
+        link: {
+          path: "/sample/manage/user",
+        },
+      },
+    ],
   },
 ];
 
@@ -63,13 +64,6 @@ const MainMenu = () => {
         </Divider>
 
         <Menu data={mainMenuData} />
-      </>
-      <>
-        <Divider orientation="left" plain>
-          관리자
-        </Divider>
-
-        <Menu data={adminMenuData} />
       </>
       <>
         <Divider orientation="left" plain>

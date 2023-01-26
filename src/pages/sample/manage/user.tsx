@@ -1,6 +1,6 @@
 import { getDefaultLayout, IDefaultLayoutPage, IPageHeader } from "@/components/layout/default-layout";
-import UserTable from "@/components/page/manage/user/\buser-table";
-import UserSearch from "@/components/page/manage/user/user-search";
+import UserTable from "@/components/page/sample/manage/user/user-table";
+import UserSearch from "@/components/page/sample/manage/user/user-search";
 import DefaultBtnGroup from "@/components/shared/ui/default-btn-group";
 import { Button } from "antd";
 import { Plus } from "lucide-react";
@@ -11,7 +11,7 @@ const pageHeader: IPageHeader = {
 };
 
 const users = [
-  { id: "1", login: "subicura", name: "김충섭", role: "관리자" },
+  { id: "1", login: "admin", name: "관리자1", role: "관리자" },
   { id: "2", login: "user", name: "직원1", role: "일반 사용자" },
 ];
 const UserPage: IDefaultLayoutPage = () => {

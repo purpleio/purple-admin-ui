@@ -69,6 +69,7 @@ cp .env.example .env
 - [Ant Design](https://www.radix-ui.com/) – 다양한 관리자 컴포넌트를 지원하는 UI 라이브러리
 - [Lucide](https://lucide.dev/) – SVG 아이콘 모음
 - [Framer Motion](https://framer.com/motion) – 애니메이션 라이브러리
+- [React CountUp](https://github.com/glennreyes/react-countup) - 카운팅 애니메이션
 - [`@next/font`](https://nextjs.org/docs/basic-features/font-optimization) – 웹폰트 최적화 라이브러리
 
 ### Code Quality

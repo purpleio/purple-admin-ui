@@ -1,14 +1,14 @@
 import { useNpmPackages } from "@/client/npmjs";
 import { getDefaultLayout, IDefaultLayoutPage, IPageHeader } from "@/components/layout/default-layout";
-import ListSearch from "@/components/page/list/list-search";
-import ListTable from "@/components/page/list/list-table";
+import ListSearch from "@/components/page/sample/list/list-search";
+import ListTable from "@/components/page/sample/list/list-table";
 import DefaultBtnGroup from "@/components/shared/ui/default-btn-group";
 import { Button } from "antd";
 import { Download } from "lucide-react";
 import { useRouter } from "next/router";
 
 const pageHeader: IPageHeader = {
-  title: "NPM Packages",
+  title: "NPM 패키지 목록",
 };
 
 const ListPage: IDefaultLayoutPage = () => {

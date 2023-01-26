@@ -4,21 +4,28 @@ import { Button, Form, Input } from "antd";
 import { useForm } from "antd/lib/form/Form";
 import { Search } from "lucide-react";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useCallback, useEffect } from "react";
 
 const ListSearch = () => {
   const router = useRouter();
   const [form] = useForm();
 
-  const handleFinish = (formValue: Record<string, unknown>) => {
-    router.push({
-      pathname: router.pathname,
-      query: { ...router.query, text: String(formValue.text || "") },
-    });
-  };
+  const handleFinish = useCallback(
+    (formValue: Record<string, unknown>) => {
+      router.push({
+        pathname: router.pathname,
+        query: { ...router.query, text: String(formValue.text || "") },
+      });
+    },
+    [router]
+  );
+
+  useEffect(() => {
+    form.setFieldsValue({ text: router.query.text });
+  }, [form, router.query]);
 
   return (
-    <DefaultForm form={form} initialValues={{ text: router.query.text }} onFinish={handleFinish}>
+    <DefaultForm form={form} onFinish={handleFinish}>
       <FormSearch>
         <Form.Item label="패키지명" name="text">
           <Input placeholder="패키지명" />

@@ -1,4 +1,4 @@
-import { Table } from "antd";
+import DefaultTable from "@/components/shared/ui/default-table";
 import React from "react";
 
 interface IUserTableProps {
@@ -49,17 +49,7 @@ const columns: any = [
 ];
 
 const UserTable = ({ users }: IUserTableProps) => {
-  return (
-    <Table
-      columns={columns}
-      dataSource={users}
-      className="mt-3"
-      size="small"
-      rowKey="id"
-      tableLayout="fixed"
-      bordered
-    />
-  );
+  return <DefaultTable columns={columns} dataSource={users} className="mt-3" size="small" />;
 };
 
 export default React.memo(UserTable);
