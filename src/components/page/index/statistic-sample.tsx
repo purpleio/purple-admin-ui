@@ -3,7 +3,7 @@ import { ArrowDown, ArrowUp } from "lucide-react";
 import React from "react";
 import CountUp from "react-countup";
 
-interface IStatisticsProps {
+interface IStatisticSampleProps {
   data: IDashboardResponse;
 }
 
@@ -25,7 +25,7 @@ const renderChangeRate = (value: number) => {
   }
 };
 
-const Statistics = ({ data }: IStatisticsProps) => {
+const StatisticSample = ({ data }: IStatisticSampleProps) => {
   return (
     <>
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -63,4 +63,4 @@ const Statistics = ({ data }: IStatisticsProps) => {
   );
 };
 
-export default React.memo(Statistics);
+export default React.memo(StatisticSample);
