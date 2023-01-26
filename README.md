@@ -12,6 +12,12 @@
 
 누구나 손쉽고 빠르게 백오피스 페이지를 개발할 수 있도록 인기있는 라이브러리를 모아 만든 Next.js 기반 어드민 UI입니다.
 
+## 데모
+
+https://admin-ui.purple.io/
+
+- GitHub 로그인 또는 아이디/패스워드 입력 (admin/admin)
+
 ## One-click 배포
 
 하단 버튼을 클릭하여 배포하고 테스트 할 수 있습니다.
@@ -25,7 +31,8 @@
 npx create-next-app purple-admin-ui --example "https://github.com/purpleio/purple-admin-ui"
 # yarn
 yarn create next-app purple-admin-ui --example "https://github.com/purpleio/purple-admin-ui"
-
+# pnpm
+pnpm create next-app purple-admin-ui --example "https://github.com/purpleio/purple-admin-ui"
 ```
 
 ## 기본 설정
