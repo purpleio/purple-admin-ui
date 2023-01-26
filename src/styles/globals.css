@@ -31,6 +31,10 @@
   .btn {
     @apply enable-transition border border-gray-300 rounded-lg hover:border-brand cursor-pointer;
   }
+
+  .ellipsis-text {
+    @apply whitespace-nowrap overflow-hidden overflow-ellipsis;
+  }
 }
 
 @import "./_spinner.css";

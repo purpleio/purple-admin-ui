@@ -37,7 +37,7 @@ const Profile = () => {
       <div className="ml-2">Administrator</div>
       <Dropdown menu={{ items }} trigger={["click"]}>
         <button className="flex items-center px-2 text-gray-600 rounded hover:bg-gray-200 enable-transition">
-          {session.user.login}
+          <span className="max-w-[10rem] ellipsis-text">{session.user.login}</span>
           <ChevronDown className="w-5 h-5" />
         </button>
       </Dropdown>

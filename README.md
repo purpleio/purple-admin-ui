@@ -39,7 +39,14 @@ pnpm create next-app purple-admin-ui --example "https://github.com/purpleio/purp
 
 1. `.env.example` 파일을 복사하여 `.env` 파일을 생성합니다.
 
-- `NEXTAUTH_SECRET` 수정
+| 키                   | 설명                       | 예시                                                     |
+| -------------------- | -------------------------- | -------------------------------------------------------- |
+| NEXTAUTH_URL         | 서비스 URL                 | http://localhost:3000                                    |
+| NEXTAUTH_SECRET      | 랜덤 비밀 키               | [랜덤생성기](https://generate-secret.vercel.app/32) 발급 |
+| GITHUB_CLIENT_ID     | GitHub OAuth Client ID     |                                                          |
+| GITHUB_CLIENT_SECRET | GitHub OAuth Client Secret |                                                          |
+| GOOGLE_CLIENT_ID     | Google OAuth Client ID     |                                                          |
+| GOOGLE_CLIENT_SECRET | Google OAuth Client Secret |                                                          |
 
 ## 기술스택 & 기능
 
