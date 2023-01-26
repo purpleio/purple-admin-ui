@@ -114,6 +114,19 @@ cp .env.example .env
 
 ## 커스텀 컴포넌트
 
+- 폼 섹션 > 폼 그룹 > 필드 인라인
+- 모달
+
+## 스크린샷
+
+![Desktop 1](./public/sample/desktop_1.png)
+![Desktop 2](./public/sample/desktop_2.png)
+![Desktop 3](./public/sample/desktop_3.png)
+![Desktop 4](./public/sample/desktop_4.png)
+![Desktop 5](./public/sample/desktop_5.png)
+![Mobile 1](./public/sample/mobile_1.png)
+![Mobile 2](./public/sample/mobile_2.png)
+
 ## 제한
 
 - IE 미지원
