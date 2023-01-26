@@ -124,8 +124,9 @@ cp .env.example .env
 ![Desktop 3](./public/sample/desktop_3.png)
 ![Desktop 4](./public/sample/desktop_4.png)
 ![Desktop 5](./public/sample/desktop_5.png)
-![Mobile 1](./public/sample/mobile_1.png)
-![Mobile 2](./public/sample/mobile_2.png)
+
+<img src="./public/sample/mobile_1.png" width="250" style="border: 1px solid #999">
+<img src="./public/sample/mobile_2.png" width="250" style="border: 1px solid #999">
 
 ## 제한
 
