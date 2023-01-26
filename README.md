@@ -43,14 +43,15 @@ pnpm create next-app --example "https://github.com/purpleio/purple-admin-ui"
 cp .env.example .env
 ```
 
-| 키                   | 설명                       | 예시                                                     |
-| -------------------- | -------------------------- | -------------------------------------------------------- |
-| NEXTAUTH_URL         | 서비스 URL                 | http://localhost:3000                                    |
-| NEXTAUTH_SECRET      | 랜덤 비밀 키               | [랜덤생성기](https://generate-secret.vercel.app/32) 발급 |
-| GITHUB_CLIENT_ID     | GitHub OAuth Client ID     |                                                          |
-| GITHUB_CLIENT_SECRET | GitHub OAuth Client Secret |                                                          |
-| GOOGLE_CLIENT_ID     | Google OAuth Client ID     |                                                          |
-| GOOGLE_CLIENT_SECRET | Google OAuth Client Secret |                                                          |
+| 키                              | 설명                       | 예시                                                     |
+| ------------------------------- | -------------------------- | -------------------------------------------------------- |
+| NEXTAUTH_URL                    | 서비스 URL                 | http://localhost:3000                                    |
+| NEXTAUTH_SECRET                 | 랜덤 비밀 키               | [랜덤생성기](https://generate-secret.vercel.app/32) 발급 |
+| GITHUB_CLIENT_ID                | GitHub OAuth Client ID     |                                                          |
+| GITHUB_CLIENT_SECRET            | GitHub OAuth Client Secret |                                                          |
+| GOOGLE_CLIENT_ID                | Google OAuth Client ID     |                                                          |
+| GOOGLE_CLIENT_SECRET            | Google OAuth Client Secret |                                                          |
+| NEXT_PUBLIC_CODENBUTTER_SITE_ID | 팝업 플러그인              | [코드앤버터](https://codenbutter.com) 사이트 아이디      |
 
 ## 기술스택 & 기능
 

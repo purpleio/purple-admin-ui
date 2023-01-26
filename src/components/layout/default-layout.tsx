@@ -6,6 +6,7 @@ import { useCallback, useEffect, useState } from "react";
 import MainMenu from "./main-menu";
 import MenuBtn from "./menu-btn";
 import PageHeader from "./page-header";
+import Profile from "./profile";
 import Sidebar from "./sidebar";
 
 export interface IPageHeader {
@@ -54,7 +55,7 @@ const DefaultLayout = ({ Page, ...props }: IDefaultLayoutProps) => {
       {/* mobile navigation */}
       <div className="z-40 flex items-center justify-between px-5 border-b h-14 sm:hidden">
         <div className="flex items-center">
-          <div className="flex items-center justify-center w-8 h-8 text-white rounded-lg bg-turquoise">U</div>
+          <div className="flex items-center justify-center w-8 h-8 text-white rounded-lg bg-turquoise">P</div>
           <div className="ml-3 text-lg text-black">Purple Admin UI</div>
         </div>
         <div>
@@ -72,6 +73,7 @@ const DefaultLayout = ({ Page, ...props }: IDefaultLayoutProps) => {
         className="fixed bottom-0 left-0 right-0 z-30 w-full p-5 overflow-auto bg-white"
         style={{ top: "3.5rem" }}
       >
+        <Profile />
         <MainMenu />
       </motion.div>
 

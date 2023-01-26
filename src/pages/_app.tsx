@@ -31,7 +31,9 @@ export default function App({ Component, pageProps: { session, ...pageProps } }:
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        <script src="https://buttr.dev/butter.js" data-site-id="fagqakujre" async />
+        {process.env.NEXT_PUBLIC_CODENBUTTER_SITE_ID ? (
+          <script src="https://buttr.dev/butter.js" data-site-id={process.env.NEXT_PUBLIC_CODENBUTTER_SITE_ID} async />
+        ) : null}
       </Head>
       <ConfigProvider
         theme={{
