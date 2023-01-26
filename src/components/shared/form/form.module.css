@@ -1,0 +1,19 @@
+.default-form :global(.ant-form-item) {
+  margin-bottom: 12px;
+}
+
+.default-form :global(.ant-divider-horizontal) {
+  margin: 12px 0;
+}
+
+.search-form {
+  @apply border border-gray-200 rounded-lg px-5 pt-4 pb-2 block sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-3 mt-1;
+}
+
+.search-form :global(.ant-form-item-label) {
+  @apply pb-1;
+}
+
+.search-form :global(.ant-form-item-label) > label {
+  @apply text-sm;
+}

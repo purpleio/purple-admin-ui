@@ -1,0 +1,46 @@
+.sidebar {
+  @apply fixed top-0 left-0 bottom-0 p-5 bg-gray-100 w-72 overflow-hidden;
+  box-shadow: inset -7px 0 9px -7px rgb(0 0 0 / 0.1);
+}
+
+.menu-wrapper {
+  position: relative;
+  width: 16px;
+  height: 14px;
+  overflow: hidden;
+}
+
+.menu-bar {
+  left: 0;
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background-color: #000;
+  transition: top 0.25s, background-color 0.5s, transform 0.25s;
+}
+
+.menu-top {
+  top: 0;
+}
+
+.menu-top:global(.active) {
+  top: 6px;
+  transform: translate(0) rotate(225deg);
+}
+
+.menu-middle {
+  top: 6px;
+}
+
+.menu-middle:global(.active) {
+  transform: translate(16px);
+}
+
+.menu-bottom {
+  top: 12px;
+}
+
+.menu-bottom:global(.active) {
+  top: 6px;
+  transform: translate(0) rotate(135deg);
+}

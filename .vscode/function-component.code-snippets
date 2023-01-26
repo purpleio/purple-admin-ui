@@ -1,0 +1,18 @@
+{
+  "Default Component": {
+    "prefix": "function-component",
+    "body": [
+      "import React from \"react\";",
+      "",
+      "interface I${TM_FILENAME_BASE/(^[a-z])|\\-([0-9a-z])/${1:/capitalize}${2:/capitalize}/g}Props {}",
+      "",
+      "const ${TM_FILENAME_BASE/(^[a-z])|\\-([0-9a-z])/${1:/capitalize}${2:/capitalize}/g} = () => {",
+      "  return <></>;",
+      "};",
+      "",
+      "export default React.memo(${TM_FILENAME_BASE/(^[a-z])|\\-([0-9a-z])/${1:/capitalize}${2:/capitalize}/g});",
+      ""
+    ],
+    "description": "Default Component"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "Default Component": {
+    "prefix": "page-component",
+    "body": [
+      "import React from \"react\";",
+      "import {",
+      "  getDefaultLayout,",
+      "  IDefaultLayoutPage,",
+      "  IPageHeader,",
+      "} from \"@/components/layout/default-layout\";",
+      "",
+      "const pageHeader: IPageHeader = {",
+      "  title: \"${TM_FILENAME_BASE/(^[a-z])|\\-([0-9a-z])/${1:/capitalize}${2:/capitalize}/g}\"",
+      "};",
+      "",
+      "const ${TM_FILENAME_BASE/(^[a-z])|\\-([0-9a-z])/${1:/capitalize}${2:/capitalize}/g}Page: IDefaultLayoutPage = () => {",
+      "  return <></>;",
+      "};",
+      "",
+      "${TM_FILENAME_BASE/(^[a-z])|\\-([0-9a-z])/${1:/capitalize}${2:/capitalize}/g}Page.getLayout = getDefaultLayout;",
+      "${TM_FILENAME_BASE/(^[a-z])|\\-([0-9a-z])/${1:/capitalize}${2:/capitalize}/g}Page.pageHeader = pageHeader;",
+      "",
+      "export default ${TM_FILENAME_BASE/(^[a-z])|\\-([0-9a-z])/${1:/capitalize}${2:/capitalize}/g}Page;",
+      ""
+    ],
+    "description": "Default Component"
+  }
+}

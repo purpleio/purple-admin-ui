@@ -1,0 +1,33 @@
+.menu a {
+  @apply flex items-center gap-2 rounded-lg text-gray-700 hover:text-gray-700 hover:bg-gray-200 transition-all duration-300;
+}
+
+.menu>li {
+  @apply text-lg mb-1;
+}
+.menu>li>a {
+  @apply px-3 py-2;
+}
+.menu a:global(.active) {
+  @apply bg-wetasphalt text-white;
+}
+
+.menu :global(.active-check) {
+  @apply hidden;
+}
+
+.menu a:global(.active) > :global(.active-check) {
+  @apply block;
+}
+
+.menu>li>ul {
+  @apply mt-1;
+}
+
+.menu>li>ul>li {
+  @apply mb-1;
+}
+
+.menu>li>ul>li>a {
+  @apply pl-9 py-1 pr-3 text-base;
+}

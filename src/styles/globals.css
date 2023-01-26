@@ -1,0 +1,36 @@
+@import "./_custom_preflight.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    font-size: 14px;
+  }
+}
+
+@layer components {
+  .enable-transition {
+    @apply transition-all duration-300;
+  }
+
+  .link-with-icon {
+    @apply inline-flex items-center gap-1;
+  }
+
+  .btn-with-icon {
+    @apply inline-flex items-center gap-1;
+  }
+
+  .btn-with-icon svg {
+    @apply w-4 h-4;
+  }
+
+  .btn {
+    @apply enable-transition border border-gray-300 rounded-lg hover:border-brand cursor-pointer;
+  }
+}
+
+@import "./_spinner.css";
