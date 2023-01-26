@@ -29,15 +29,15 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse<Data>
   res.status(200).json({
     visitor: {
       value: getRandomInt(1000, 10000),
-      rate: getRandomRate(-30, 30),
+      rate: getRandomRate(-10, 50),
     },
     order: {
       value: getRandomInt(10, 1000),
-      rate: getRandomRate(-30, 30),
+      rate: getRandomRate(-10, 50),
     },
     income: {
       value: getRandomInt(1000000, 10000000),
-      rate: getRandomRate(-30, 30),
+      rate: getRandomRate(-10, 50),
     },
   });
 }

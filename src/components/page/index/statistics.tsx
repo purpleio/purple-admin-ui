@@ -33,7 +33,7 @@ const Statistics = ({ data }: IStatisticsProps) => {
           <div>방문자</div>
           <div className="mt-3">
             <div className="flex items-center mt-3">
-              <div className="text-2xl font-bold grow">
+              <div className="text-2xl font-semibold grow">
                 <CountUp end={data.visitor.value} separator="," />명
               </div>
               <div>{renderChangeRate(data.visitor.rate)}</div>
@@ -43,7 +43,7 @@ const Statistics = ({ data }: IStatisticsProps) => {
         <div className="p-5 border rounded-lg ">
           <div>주문</div>
           <div className="flex items-center mt-3">
-            <div className="text-2xl font-bold grow">
+            <div className="text-2xl font-semibold grow">
               <CountUp end={data.order.value} separator="," />건
             </div>
             <div>{renderChangeRate(data.order.rate)}</div>
@@ -52,7 +52,7 @@ const Statistics = ({ data }: IStatisticsProps) => {
         <div className="p-5 border rounded-lg ">
           <div>매출</div>
           <div className="flex items-center mt-3">
-            <div className="text-2xl font-bold grow">
+            <div className="text-2xl font-semibold grow">
               <CountUp end={data.income.value} separator="," />원
             </div>
             <div>{renderChangeRate(data.income.rate)}</div>

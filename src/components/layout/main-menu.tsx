@@ -16,6 +16,12 @@ const mainMenuData: IMenu[] = [
     icon: <List className="w-5 h-5" />,
     submenu: [
       {
+        name: "프로필",
+        link: {
+          path: "/sample/profile",
+        },
+      },
+      {
         name: "패키지 목록",
         link: {
           path: "/sample/list",
@@ -42,13 +48,7 @@ const devMenuData: IMenu[] = [
       {
         name: "폼",
         link: {
-          path: "/guide/form",
-        },
-      },
-      {
-        name: "리스트/조회/팝업",
-        link: {
-          path: "/guide/list",
+          path: "/sample/form",
         },
       },
     ],

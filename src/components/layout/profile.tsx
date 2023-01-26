@@ -15,7 +15,7 @@ const Profile = () => {
   const items: MenuProps["items"] = [
     {
       label: (
-        <Link href="/profile" className="min-w-[8rem] link-with-icon">
+        <Link href="/sample/profile" className="min-w-[8rem] link-with-icon">
           <User width={16} height={16} />내 프로필
         </Link>
       ),
