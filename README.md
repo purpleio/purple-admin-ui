@@ -10,13 +10,13 @@
 
 ## 소개
 
-누구나 손쉽고 빠르게 백오피스 페이지를 개발할 수 있도록 인기있는 라이브러리를 모아 만든 Next.js 기반 어드민 UI입니다.
+누구나 손쉽고 빠르게 백오피스 페이지를 개발할 수 있도록 인기있는 라이브러리를 모아 만든 Next.js 기반 어드민 UI입니다. ~~어드민 개발만 10년째..~~
 
 ## 데모
 
 https://admin-ui.purple.io/
 
-- GitHub 로그인 또는 아이디/패스워드 입력 (admin/admin)
+- OAuth(Google/GitHub) 또는 아이디/패스워드(admin/admin) 로그인
 
 ## One-click 배포
 

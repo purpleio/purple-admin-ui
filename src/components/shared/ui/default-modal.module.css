@@ -1,0 +1,15 @@
+.default-popup :global(.ant-modal-close-x) {
+  display: none;
+}
+
+.default-popup-close-btn {
+  @apply absolute top-6 right-6 text-gray-400 hover:text-gray-600;
+}
+
+.default-popup-title {
+  @apply text-2xl font-medium px-2;
+}
+
+.default-popup-content {
+  @apply pt-5 pb-2 px-2;
+}
