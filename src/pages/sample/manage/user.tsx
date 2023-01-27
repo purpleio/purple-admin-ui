@@ -1,6 +1,6 @@
 import { getDefaultLayout, IDefaultLayoutPage, IPageHeader } from "@/components/layout/default-layout";
-import UserTable from "@/components/page/sample/manage/user/user-table";
 import UserSearch from "@/components/page/sample/manage/user/user-search";
+import UserTable from "@/components/page/sample/manage/user/user-table";
 import DefaultBtnGroup from "@/components/shared/ui/default-btn-group";
 import { Button } from "antd";
 import { Plus } from "lucide-react";
