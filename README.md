@@ -86,7 +86,15 @@ cp .env.example .env
 - [swr](https://swr.vercel.app/) - 데이터 조회를 위한 Hooks
 - [codenbutter](https://www.codenbutter.com/) - 공지 팝업
 
-## 디렉토리
+## 프로젝트 구성
+
+### 아키텍처
+
+- 인증을 제외한 모든 페이지를 정적 페이지로 제공합니다. (SSR 사용 X) ~~API가 죽어도 페이지는 뜹니다~~
+- 비즈니스 로직은 백엔드 API로 제공하고 프론트엔드는 잘 표현하고 잘 전달하는 역할을 합니다.
+- 폼과 관련된 부분은 Ant Design의 Form 컴포넌트를 적극적으로 사용합니다.
+
+### 디렉토리
 
 효율적인 관리를 위해 디렉토리 구조를 다음과 같이 정의합니다.
 
@@ -124,10 +132,9 @@ cp .env.example .env
 ![Desktop 2](./public/sample/desktop_2.png)
 ![Desktop 3](./public/sample/desktop_3.png)
 ![Desktop 4](./public/sample/desktop_4.png)
-![Desktop 5](./public/sample/desktop_5.png)
 
-<img src="./public/sample/mobile_1.png" width="250" style="border: 1px solid #999">
-<img src="./public/sample/mobile_2.png" width="250" style="border: 1px solid #999">
+<img src="./public/sample/mobile_1.png" width="250">
+<img src="./public/sample/mobile_2.png" width="250">
 
 ## 제한
 
