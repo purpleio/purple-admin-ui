@@ -67,7 +67,12 @@ const LoginForm = () => {
         </a>
       </div>
       <div className="my-5 text-lg text-center text-gray-400">or</div>
-      <Form<ILoginFormValue> form={form} layout="vertical" onFinish={handleFinish}>
+      <Form<ILoginFormValue>
+        form={form}
+        layout="vertical"
+        initialValues={{ username: "admin", password: "admin" }}
+        onFinish={handleFinish}
+      >
         <div className="mb-3">
           {router?.query.error === "CredentialsSignin" ? (
             <>

@@ -14,7 +14,7 @@
 
 ## 데모
 
-https://admin-ui.purple.io/
+https://admin-ui.purple.io/login
 
 > OAuth(Google/GitHub) 또는 아이디/패스워드(admin/admin)으로 로그인하세요.
 
