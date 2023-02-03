@@ -1,8 +1,10 @@
 import { getDefaultLayout, IDefaultLayoutPage, IPageHeader } from "@/components/layout/default-layout";
-import DefaultForm from "@/components/shared/form/default-form";
-import FieldInline from "@/components/shared/form/field-inline";
-import FormGroup from "@/components/shared/form/form-group";
-import FormSection from "@/components/shared/form/form-section";
+import CodemirrorEditor from "@/components/shared/form/control/codemirror-editor";
+import QuillEditor from "@/components/shared/form/control/quill-editor";
+import DefaultForm from "@/components/shared/form/ui/default-form";
+import FieldInline from "@/components/shared/form/ui/field-inline";
+import FormGroup from "@/components/shared/form/ui/form-group";
+import FormSection from "@/components/shared/form/ui/form-section";
 import {
   Button,
   Checkbox,
@@ -177,6 +179,60 @@ const FormPage: IDefaultLayoutPage = () => {
           <FormGroup title="Textarea">
             <Form.Item name="textarea">
               <Input.TextArea placeholder="placeholder" rows={10} />
+            </Form.Item>
+          </FormGroup>
+
+          <Divider />
+
+          <FormGroup title="Wysiwyg Editor">
+            <Form.Item name="wysiwyg">
+              <QuillEditor />
+            </Form.Item>
+          </FormGroup>
+
+          <Divider />
+
+          <FormGroup title="Codemirror Editor">
+            <Form.Item name="codemirror">
+              <CodemirrorEditor />
+            </Form.Item>
+          </FormGroup>
+        </FormSection>
+
+        <FormSection title="응용" description="응용 예시">
+          <FormGroup title="전화번호">
+            <FieldInline>
+              <Form.Item name="phone1">
+                <Input className="w-20" />
+              </Form.Item>
+              <span className="mb-5">-</span>
+              <Form.Item name="phone2">
+                <Input className="w-20" />
+              </Form.Item>
+              <span className="mb-5">-</span>
+              <Form.Item name="phone3">
+                <Input className="w-20" />
+              </Form.Item>
+            </FieldInline>
+          </FormGroup>
+
+          <Divider />
+
+          <FormGroup title="주소">
+            <Form.Item name="address1">
+              <Select style={{ width: 200 }} defaultValue="서울">
+                <Select.Option value="option1">서울</Select.Option>
+                <Select.Option value="option2">경기도</Select.Option>
+                <Select.Option value="option3">부산</Select.Option>
+              </Select>
+            </Form.Item>
+
+            <Form.Item name="address2">
+              <Input placeholder="상세 주소 1" />
+            </Form.Item>
+
+            <Form.Item name="address3">
+              <Input placeholder="상세 주소 2" />
             </Form.Item>
           </FormGroup>
         </FormSection>

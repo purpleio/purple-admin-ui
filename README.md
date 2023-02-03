@@ -51,7 +51,18 @@ cp .env.example .env
 | GITHUB_CLIENT_SECRET            | GitHub OAuth Client Secret |                                                          |
 | GOOGLE_CLIENT_ID                | Google OAuth Client ID     |                                                          |
 | GOOGLE_CLIENT_SECRET            | Google OAuth Client Secret |                                                          |
+| NEXT_PUBLIC_API_ENDPOINT        | API 서버 엔드포인트        | http://localhost:3000                                    |
 | NEXT_PUBLIC_CODENBUTTER_SITE_ID | 팝업 플러그인              | [코드앤버터](https://codenbutter.com) 사이트 아이디      |
+
+### 샘플
+
+기본적으로 샘플 코드가 내장되어 있습니다. 샘플 코드 확인 후 지워주세요.
+
+- `src/client/sample`
+- `src/components/page/sample`
+- `src/pages/api/sample`
+- `src/pages/sample`
+- `public/sample`
 
 ## 기술스택 & 기능
 
@@ -73,6 +84,11 @@ cp .env.example .env
 - [React CountUp](https://github.com/glennreyes/react-countup) - 카운팅 애니메이션
 - [`@next/font`](https://nextjs.org/docs/basic-features/font-optimization) – 웹폰트 최적화 라이브러리
 
+### Form Control
+
+- [quill](https://quilljs.com/) – 위지윅 텍스트 에디터
+- [codemirror](https://codemirror.net/) – 코드 에디터
+
 ### Code Quality
 
 - [TypeScript](https://www.typescriptlang.org/) – Strongly typed programming language that builds on JavaScript
@@ -84,6 +100,8 @@ cp .env.example .env
 - [Pretendard](https://cactus.tistory.com/306) – 어느 플랫폼에서든 사용할 수 있는 system-ui 대체 글꼴
 - [Day.js](https://day.js.org/) – 날짜/시간 라이브러리
 - [swr](https://swr.vercel.app/) - 데이터 조회를 위한 Hooks
+- [ky](https://github.com/sindresorhus/ky) - 작고 우아한 HTTP 클라이언트
+- [numeral](http://numeraljs.com/) - 숫자 포멧팅 라이브러리
 - [codenbutter](https://www.codenbutter.com/) - 공지 팝업
 
 ## 프로젝트 구성
@@ -115,11 +133,36 @@ cp .env.example .env
 └─ public # 이미지등 정적 파일
 ```
 
-**특징**
+**src/client**
 
-- API 호출 코드는 `client`에 모아서 관리
+- 각 컴포넌트에서 직접 fetch를 호출하지 않고 client 디렉토리에 정의한 함수를 사용
+- 조회는 `SWR`을 사용하고 POST나 PUT은 `ky`를 사용
+
+**src/components/layout**
+
+- 레이아웃 정의
+
+**src/components/page**
+
+- 특정 페이지에서만 사용하는 컴포넌트 정의
+- `pages/profile`에서 사용하는 컴포넌트는 `components/page/profile`에 정의
 - component의 style은 같은 폴더에 module.css로 작성
-- `pages` 파일의 세부 컴포넌트를 `components/page`에 작성
+
+**src/components/shared**
+
+- 공통으로 사용하는 컴포넌트 정의
+
+**src/fonts**
+
+- 웹 폰트 저장
+
+**lib/auth**
+
+- 인증관련 코드 정의
+
+**lib/hooks**
+
+- 커스텀 훅 정의
 
 ## 커스텀 컴포넌트
 

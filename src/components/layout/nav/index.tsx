@@ -9,6 +9,7 @@ interface INavProps {
 }
 
 export interface IMenu {
+  id?: string /* 식별자 없으면 name으로 대체 */;
   name: string;
   link?: {
     path: string;
@@ -30,7 +31,7 @@ const Nav = ({ data }: INavProps) => {
   return (
     <ul className={style.menu}>
       {data.map((menu) => {
-        return <NavMenu key={menu.name} menu={menu} />;
+        return <NavMenu key={menu.id || menu.name} menu={menu} />;
       })}
     </ul>
   );

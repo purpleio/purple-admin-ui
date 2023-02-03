@@ -1,0 +1,15 @@
+/* button */
+.ant-btn svg,
+.ant-input-affix-wrapper svg {
+  @apply w-4 h-4;
+}
+
+.ant-btn.ant-btn-sm svg,
+.ant-input-affix-wrapper.ant-input-affix-wrapper-sm svg {
+  @apply w-3 h-3;
+}
+
+.ant-btn.ant-btn-lg svg,
+.ant-input-affix-wrapper.ant-input-affix-wrapper-lg svg {
+  @apply w-5 h-5;
+}

@@ -40,6 +40,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        "antd-form": "#d9d9d9",
         brand: "#63489a",
         turquoise: "#1abc9c",
         greensea: "#16a085",

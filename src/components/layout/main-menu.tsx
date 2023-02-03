@@ -1,10 +1,11 @@
 import { Divider } from "antd";
-import { Home, List, Monitor } from "lucide-react";
+import { Home, Monitor, Package2 } from "lucide-react";
 import React from "react";
 import Menu, { IMenu } from "./nav";
 
 const mainMenuData: IMenu[] = [
   {
+    id: "home",
     name: "홈",
     icon: <Home className="w-5 h-5" />,
     link: {
@@ -12,28 +13,15 @@ const mainMenuData: IMenu[] = [
     },
   },
   {
-    name: "샘플 페이지",
-    icon: <List className="w-5 h-5" />,
+    id: "product",
+    name: "상품 관리",
+    icon: <Package2 className="w-5 h-5" />,
     submenu: [
       {
-        name: "프로필",
+        id: "productList",
+        name: "상품 목록",
         link: {
-          path: "/sample/profile",
-        },
-      },
-      {
-        name: "패키지 목록",
-        link: {
-          path: "/sample/list",
-          query: {
-            text: "react",
-          },
-        },
-      },
-      {
-        name: "사용자관리",
-        link: {
-          path: "/sample/manage/user",
+          path: "/sample/product/list",
         },
       },
     ],
@@ -42,6 +30,7 @@ const mainMenuData: IMenu[] = [
 
 const devMenuData: IMenu[] = [
   {
+    id: "dev",
     name: "사용 가이드",
     icon: <Monitor className="w-5 h-5" />,
     submenu: [

@@ -94,7 +94,7 @@ const DefaultLayout = ({ Page, ...props }: IDefaultLayoutProps) => {
         ) : (
           <></>
         )}
-        <section className="px-5 pt-5 pb-10 sm:px-10">
+        <section className="px-5 pb-5 sm:px-10">
           <Page {...props} />
         </section>
         {!isShowSidebar ? (

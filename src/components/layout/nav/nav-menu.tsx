@@ -21,7 +21,7 @@ const NavMenu = ({ menu }: INavMenuProps) => {
       <li>
         <a onClick={() => setIsShowSubMenu(!isShowSubMenu)}>
           {menu.icon}
-          <span className="grow">{menu.name}</span>
+          <span className="cursor-pointer grow">{menu.name}</span>
           {menu.submenu && menu.submenu.length > 0 ? (
             isShowSubMenu ? (
               <ChevronUp className="w-6 h-6 text-gray-500" />

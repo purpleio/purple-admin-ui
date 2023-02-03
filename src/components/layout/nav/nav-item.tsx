@@ -21,7 +21,7 @@ const NavItem = ({ item }: INavItemProps) => {
         className={(item.isActive || isEqualPath)(router, item.link) ? "active" : ""}
       >
         {item.icon}
-        <span className="grow">{item.name}</span>
+        <span className="cursor-pointer grow">{item.name}</span>
         <ChevronRight className="w-6 h-6 text-white active-check" />
       </Link>
     </li>

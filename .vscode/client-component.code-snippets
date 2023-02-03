@@ -1,0 +1,16 @@
+{
+  "Default Component": {
+    "prefix": ["Client"],
+    "body": [
+      "import useSWR from \"swr\";",
+      "",
+      "interface I${1:${TM_FILENAME_BASE/(^[a-z])|\\-([0-9a-z])/${1:/capitalize}${2:/capitalize}/g}}Response {}",
+      "",
+      "export const use${1:${TM_FILENAME_BASE/(^[a-z])|\\-([0-9a-z])/${1:/capitalize}${2:/capitalize}/g}} = () => {",
+      "  return useSWR<I${1:${TM_FILENAME_BASE/(^[a-z])|\\-([0-9a-z])/${1:/capitalize}${2:/capitalize}/g}}Response>(`/...`);",
+      "};",
+      ""
+    ],
+    "description": "기본 클라이언트 템플릿"
+  }
+}

@@ -100,7 +100,7 @@ const LoginForm = () => {
       </Form>
 
       <DefaultModal title="비밀번호 찾기" open={showPasswordModal} handleHide={() => setShowPasswordModal(false)}>
-        👀 임시 로그인 정보는 admin / admin 입니다.
+        🔑 임시 로그인 정보는 admin / admin 입니다.
       </DefaultModal>
     </>
   );

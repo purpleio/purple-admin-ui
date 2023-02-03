@@ -1,4 +1,4 @@
-import { IDashboardResponse } from "@/client/dashboard";
+import { IDashboardResponse } from "@/client/sample/dashboard";
 import { ArrowDown, ArrowUp } from "lucide-react";
 import React from "react";
 import CountUp from "react-countup";
