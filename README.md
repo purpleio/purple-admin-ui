@@ -12,6 +12,11 @@
 
 누구나 손쉽고 빠르게 백오피스 페이지를 개발할 수 있도록 인기있는 라이브러리를 모아 만든 Next.js + Tailwind + Ant Design 기반 어드민 템플릿입니다. ~~어드민 개발만 10년째..~~
 
+![Desktop Demo](./public/sample/desktop_3.png)
+
+> **Warning**
+> This is work in progress.
+
 ## 데모
 
 https://admin-ui.purple.io/login
@@ -56,13 +61,48 @@ cp .env.example .env
 
 ### 샘플
 
-기본적으로 샘플 코드가 내장되어 있습니다. 샘플 코드 확인 후 지워주세요.
+샘플 코드를 통해 기본적인 사용법을 확인할 수 있습니다.
 
-- `src/client/sample`
-- `src/components/page/sample`
-- `src/pages/api/sample`
-- `src/pages/sample`
-- `public/sample`
+**API 서버 (mock data)**
+
+일반적으로 백엔드 서버를 분리하는 경우가 많지만 간단한 테스트를 위한 샘플 코드입니다.
+
+- [src/pages/api/sample/dashboard.ts](src/pages/api/sample/dashboard.ts): 통계 조회
+- [src/pages/api/sample/products/index.ts](src/pages/api/sample/products/index.ts): 상품 목록 조회 API
+- [src/pages/api/sample/products/[id].ts](src/pages/api/sample/products/[id].ts): 상품 CRUD API
+
+**API 클라이언트**
+
+프론트엔드에서 API를 호출하기 위한 함수를 모아 놓은 샘플 코드입니다.  
+API와 관련된 코드와 Type을 관리합니다.
+
+- [src/client/sample/dashboard.ts](src/client/sample/dashboard.ts): 통계 조회 API
+- [src/client/sample/product.ts](src/client/sample/product.ts): 상품 CRUD / Type
+
+**페이지**
+
+대시보드와 상품 CRUD 샘플 페이지입니다.  
+세부사항은 `src/components/page/[동일한 페이지 경로]`에 컴포넌트로 분리합니다.
+
+- [src/pages/index.tsx](src/pages/index.tsx): 대시보드
+- [src/pages/sample/product/list.tsx](src/pages/sample/product/list.tsx): 상품 목록
+- [src/pages/sample/product/new.tsx](src/pages/sample/product/new.tsx): 상품 등록
+- [src/pages/sample/product/edit/[id].tsx](src/pages/sample/product/edit/[id].tsx): 상품 수정
+
+**컴포넌트**
+
+여러가지 라이브러리를 섞어 보기 좋게 만든 샘플 코드입니다.  
+통계, 검색, 리스트, 입력폼등 기본 기능을 확인할 수 있습니다.
+
+- [src/components/page/index/calendar-sample.tsx](src/components/page/index/calendar-sample.tsx): 캘린더 샘플 컴포넌트
+- [src/components/page/index/statistic-sample.tsx](src/components/page/index/statistic-sample.tsx): 통계 샘플 컴포넌트
+- [src/components/page/sample/product/product-form.tsx](src/components/page/sample/product/product-form.tsx): 상품 입력폼 (생성/수정 공통 사용) 컴포넌트
+- [src/components/page/sample/product/product-list.tsx](src/components/page/sample/product/product-list.tsx): 상품 목록 컴포넌트
+- [src/components/page/sample/product/product-search.tsx](src/components/page/sample/product/product-search.tsx): 상품 검색 컴포넌트
+
+**샘플 이미지**
+
+- [public/sample](public/sample): 샘플 이미지
 
 ## 기술스택 & 기능
 
@@ -82,7 +122,7 @@ cp .env.example .env
 - [Lucide](https://lucide.dev/) – SVG 아이콘 모음
 - [Framer Motion](https://framer.com/motion) – 애니메이션 라이브러리
 - [React CountUp](https://github.com/glennreyes/react-countup) - 카운팅 애니메이션
-- [`@next/font`](https://nextjs.org/docs/basic-features/font-optimization) – 웹폰트 최적화 라이브러리
+- [@next/font](https://nextjs.org/docs/basic-features/font-optimization) – 웹폰트 최적화 라이브러리
 
 ### Form Control
 
@@ -171,10 +211,9 @@ cp .env.example .env
 
 ## 스크린샷
 
-![Desktop 1](./public/sample/desktop_1.png)
-![Desktop 2](./public/sample/desktop_2.png)
-![Desktop 3](./public/sample/desktop_3.png)
-![Desktop 4](./public/sample/desktop_4.png)
+![Desktop Screenshot 1](./public/sample/desktop_1.png)
+![Desktop Screenshot 2](./public/sample/desktop_2.png)
+![Desktop Screenshot 3](./public/sample/desktop_4.png)
 
 <img src="./public/sample/mobile_1.png" width="250">
 <img src="./public/sample/mobile_2.png" width="250">
