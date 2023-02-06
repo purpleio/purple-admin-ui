@@ -56,5 +56,5 @@ export const createProduct = (value: IProductFormValue) => {
 };
 
 export const updateProduct = (id: string, value: IProductFormValue) => {
-  return fetchApi.put(`api/sample/products/${id}`, { body: JSON.stringify({ id, ...value }) });
+  return fetchApi.put(`api/sample/products/${id}`, { body: JSON.stringify(value) });
 };
