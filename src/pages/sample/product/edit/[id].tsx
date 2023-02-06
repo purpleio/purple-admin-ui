@@ -17,7 +17,7 @@ const ProductEditPage: IDefaultLayoutPage = () => {
   }
 
   if (!data || isLoading || isValidating) {
-    return <Skeleton />;
+    return <Skeleton className="my-5" />;
   }
 
   return <ProductForm id={router.query.id as string} initialValues={data.data} />;
