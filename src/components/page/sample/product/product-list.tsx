@@ -6,6 +6,7 @@ import { Alert, Button, Dropdown, MenuProps, Popconfirm } from "antd";
 import { ColumnsType } from "antd/es/table";
 import dayjs from "dayjs";
 import { Download } from "lucide-react";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import numeral from "numeral";
 import React, { useCallback, useMemo, useState } from "react";
@@ -54,9 +55,9 @@ const ProductList = () => {
       render: (_value: unknown, record: IProduct) => {
         return (
           <span className="flex justify-center gap-2">
-            <a href={`/sample/product/edit/${record.id}`} className="px-2 py-1 text-sm btn">
+            <Link href={`/sample/product/edit/${record.id}`} className="px-2 py-1 text-sm btn">
               수정
-            </a>
+            </Link>
             <Popconfirm
               title="상품을 삭제하시겠습니까?"
               onConfirm={() => alert("삭제")}
