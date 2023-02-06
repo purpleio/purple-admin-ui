@@ -10,13 +10,13 @@ const pageHeader: IPageHeader = {
 
 const ProductEditPage: IDefaultLayoutPage = () => {
   const router = useRouter();
-  const { data, error, isLoading } = useProduct(router.query.id as string);
+  const { data, error, isLoading, isValidating } = useProduct(router.query.id as string);
 
   if (error) {
     return <Alert message="데이터 로딩 중 오류가 발생했습니다." type="warning" className="my-5" />;
   }
 
-  if (!data || isLoading) {
+  if (!data || isLoading || isValidating) {
     return <Skeleton />;
   }
 
