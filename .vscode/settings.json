@@ -7,5 +7,6 @@
     "source.fixAll": true,
     "source.organizeImports": true
   },
-  "prettier.enable": true
+  "prettier.enable": true,
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

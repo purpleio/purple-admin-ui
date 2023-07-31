@@ -1,4 +1,4 @@
-import { Badge, BadgeProps, Calendar } from "antd";
+import { Badge, BadgeProps, Calendar, CalendarProps } from "antd";
 import { Dayjs } from "dayjs";
 import React from "react";
 
@@ -63,7 +63,13 @@ const CalendarSample = () => {
     );
   };
 
-  return <Calendar dateCellRender={dateCellRender} monthCellRender={monthCellRender} />;
+  const cellRender: CalendarProps<Dayjs>['cellRender'] = (current, info) => {
+    if (info.type === 'date') return dateCellRender(current);
+    if (info.type === 'month') return monthCellRender(current);
+    return info.originNode;
+  };
+
+  return <Calendar cellRender={cellRender} />;
 };
 
 export default React.memo(CalendarSample);

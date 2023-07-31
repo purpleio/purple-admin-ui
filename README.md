@@ -128,7 +128,7 @@ API와 관련된 코드와 Type을 관리합니다.
 - [Lucide](https://lucide.dev/) – SVG 아이콘 모음
 - [Framer Motion](https://framer.com/motion) – 애니메이션 라이브러리
 - [React CountUp](https://github.com/glennreyes/react-countup) - 카운팅 애니메이션
-- [@next/font](https://nextjs.org/docs/basic-features/font-optimization) – 웹폰트 최적화 라이브러리
+- [next/font](https://nextjs.org/docs/basic-features/font-optimization) – 웹폰트 최적화 라이브러리
 
 ### Form Control
 
