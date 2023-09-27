@@ -35,7 +35,7 @@ const ProductSearch = () => {
       <FormSearch>
         <FieldInline>
           <Form.Item label="기간" name="searchDateType" initialValue="created">
-            <Select dropdownMatchSelectWidth={false}>
+            <Select popupMatchSelectWidth={false}>
               <Select.Option value="created">등록일자</Select.Option>
               <Select.Option value="updated">수정일자</Select.Option>
             </Select>
@@ -52,7 +52,7 @@ const ProductSearch = () => {
         <div>
           <FieldInline>
             <Form.Item label="검색조건" name="searchType" initialValue="productName">
-              <Select dropdownMatchSelectWidth={false}>
+              <Select popupMatchSelectWidth={false}>
                 <Select.Option value="productName">상품명</Select.Option>
                 <Select.Option value="brandName">브랜드명</Select.Option>
               </Select>
